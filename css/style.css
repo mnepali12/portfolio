@@ -1,0 +1,31 @@
+       @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Oswald:wght@200..700&display=swap');
+
+       :root {
+           --primary: #2563EB;
+           --secondary: #06B6D4;
+           --background: #0F172A;
+           --text: #F8FAFC;
+       }
+
+       body {
+           font-family: "Raleway", sans-serif;
+           color: var(--text);
+           background-image: url(/image/bg1.jpg);
+           background-position: center;
+           background-size: cover;
+       }
+
+       .container {
+           max-width: 86%;
+           margin: 0 auto;
+       }
+
+       .title {
+           font-family: "Limelight", sans-serif;
+       }
+
+       html {
+           scroll-behavior: smooth;
+       }
+
+       

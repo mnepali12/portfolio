@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>protfolio</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+
+<body id="home" class=" ">
+    <!-- Scroll to top button -->
+    <a href="#top"
+        class="fixed bottom-8 right-8 bg-[#27CFF5] w-12 h-12 rounded-full shadow-2xl flex items-center justify-center text-white hover:bg-(--primary) hover:-translate-y-1 transition-all z-50">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18">
+            </path>
+        </svg>
+    </a>
+    <!-- header -->
+    <header class="shadow-md shadow-[white] py-2 bg-(--primary) text-(--text) sticky top-0 z-40">
+        <nav class="flex justify-between items-center container">
+            <div class="flex justify-center items-center gap-x-3">
+                <img src="/image/rotating.gif" alt="globe" class="h-10">
+                <strong>GIS Learning</strong>
+            </div>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-6 nav-item">
+                <a href="#home" class="hover:underline">Home</a>
+                <a href="#about" class="hover:underline">About</a>
+                <a href="#portfolio" class="hover:underline">Portfolio</a>
+                <a href="#contact" class="hover:underline">Contact</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button type="button" data-drawer-target="drawer-example" data-drawer-show="drawer-example"
+                    aria-controls="drawer-example">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+
+    <!-- Drawer Menu -->
+    <div id="drawer-example"
+        class="fixed top-0 left-0 z-40 h-screen p-4 overflow-y-auto transition-transform -translate-x-full bg-(--primary) w-72 border-e border-default"
+        tabindex="-1">
+
+        <!-- Drawer Header -->
+        <div class="border-b border-default pb-4 mb-5 flex items-center justify-between">
+            <h5 class="text-lg font-medium">Menu</h5>
+
+            <button type="button" data-drawer-hide="drawer-example" aria-controls="drawer-example"
+                class="text-body hover:text-heading rounded w-9 h-9 flex items-center justify-center">
+                ✕
+            </button>
+        </div>
+
+        <!-- Drawer Links -->
+        <div class="flex flex-col gap-6 text-lg">
+
+            <a href="#home" data-drawer-hide="drawer-example" class="hover:underline">
+                Home
+            </a>
+
+            <a href="#about" data-drawer-hide="drawer-example" class="hover:underline">
+                About
+            </a>
+
+            <a href="#portfolio" data-drawer-hide="drawer-example" class="hover:underline">
+                Portfolio
+            </a>
+
+            <a href="#contact" data-drawer-hide="drawer-example" class="hover:underline">
+                Contact
+            </a>
+
+        </div>
+    </div>
+
+    <main>
+        <!-- carosuel -->
+        <section>
+            <div id="default-carousel" class="relative w-full" data-carousel="slide">
+                <!-- Carousel wrapper -->
+                <div class="relative h-56 overflow-hidden rounded-base md:h-96">
+                    <!-- Item 1 -->
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                        <img src="/image/GIS.jpg"
+                            class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                    </div>
+                    <!-- Item 2 -->
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                        <img src="/image/bg.webp"
+                            class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                    </div>
+                    <!-- Item 3 -->
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                        <img src="/image/GIS1.jpg"
+                            class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                    </div>
+                    <!-- Item 4 -->
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                        <img src="/image/gis3.jpg"
+                            class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                    </div>
+                </div>
+                <!-- Slider indicators -->
+                <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
+                    <button type="button" class="w-3 h-3 rounded-base" aria-current="true" aria-label="Slide 1"
+                        data-carousel-slide-to="0"></button>
+                    <button type="button" class="w-3 h-3 rounded-base" aria-current="false" aria-label="Slide 2"
+                        data-carousel-slide-to="1"></button>
+                    <button type="button" class="w-3 h-3 rounded-base" aria-current="false" aria-label="Slide 3"
+                        data-carousel-slide-to="2"></button>
+                    <button type="button" class="w-3 h-3 rounded-base" aria-current="false" aria-label="Slide 4"
+                        data-carousel-slide-to="3"></button>
+                    <button type="button" class="w-3 h-3 rounded-base" aria-current="false" aria-label="Slide 5"
+                        data-carousel-slide-to="4"></button>
+                </div>
+                <!-- Slider controls -->
+                <button type="button"
+                    class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                    data-carousel-prev>
+                    <span
+                        class="inline-flex items-center justify-center w-10 h-10 rounded-base bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                        <svg class="w-5 h-5 text-white rtl:rotate-180" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="m15 19-7-7 7-7" />
+                        </svg>
+                        <span class="sr-only">Previous</span>
+                    </span>
+                </button>
+                <button type="button"
+                    class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                    data-carousel-next>
+                    <span
+                        class="inline-flex items-center justify-center w-10 h-10 rounded-base bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                        <svg class="w-5 h-5 text-white rtl:rotate-180" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="m9 5 7 7-7 7" />
+                        </svg>
+                        <span class="sr-only">Next</span>
+                    </span>
+                </button>
+            </div>
+
+        </section>
+        <!-- Hero section -->
+        <selection>
+            <div class="py-10"></div>
+            <div class="md:flex container items-center border-2 border-(--secondary) rounded-4xl p-4">
+                <div class="md:w-[75%] space-y-[20px] text-justify">
+                    <h1 class="md:text-2xl font-semibold title text-center text-red-200 underline">
+                        MAHESH NEPALI<br>GIS Professional Mentor and Web Designer
+                    </h1>
+                    <P>
+                        Mahesh Nepali is a dedicated GIS professional mentor and web designer known for his
+                        commitment to promoting geospatial knowledge and digital innovation. With strong expertise in
+                        Geographic Information Systems (GIS), he actively guides students and young professionals in
+                        learning spatial data analysis, mapping techniques, and practical GIS applications.
+                    </P>
+                    <p>Alongside
+                        his GIS mentoring, he works as a web designer, creating modern and user-friendly websites that
+                        integrate technology with effective design. Through training programs, workshops, and online
+                        platforms, Mahesh Nepali continues to inspire learners and contribute to the growth of GIS
+                        education and digital skills development.
+                    </P>
+                    <div class="flex gap-8">
+                        <a href="#" class="bg-(--primary) text-white px-4 py-2 rounded-lg">Hire Me</a>
+                        <a href="/image/CV.pdf" class="bg-(--secondary) text-white px-4 py-2 rounded-lg">Download CV</a>
+                    </div>
+                    <div class="flex gap-8 text-[28px]">
+                        <a href="https://www.facebook.com/hanok.nepali" class="hover:text-(--primary)" target="_blank">
+                            <i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://twitter.com/mnepali12" class="hover:text-(--primary)" target="_blank">
+                            <i class="fa-brands fa-twitter"></i></a>
+                        <a href="https://www.linkedin.com/in/mahesh-nepali-0a10763b6/" class="hover:text-(--primary)"
+                            target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/mnepali12" class="hover:text-(--primary)" target="_blank"><i
+                                class="fa-brands fa-github"></i></a>
+                    </div>
+
+                </div>
+                <div class="md:w-[50%]">
+                    <img class="md:w-full flip-image" src="image/hero.png" alt="hero image">
+                </div>
+            </div>
+        </selection>
+    </main>
+    <!-- aboutsection -->
+    <section id="about" class="py-20">
+        <div class="md:flex gap-0 container items-center border-2 border-(--secondary) rounded-4xl p-4">
+
+            <div class="md:w-[50%] perspective">
+                <img class="md:w-[75%]" src="image/mahesh.avif" alt="hero image">
+            </div>
+
+            <div class="md:w-[75%] space-y-3 text-justify">
+                <h1 class="md:text-2xl font-semibold title text-center text-green-100 mt-4 underline">
+                    ABOUT
+                </h1>
+                <p>
+                    our focuses on collecting, analyzing, and managing spatial data to
+                    support better decision-making and planning. GIS professionals use tools such as digital
+                    mapping, satellite imagery, and spatial analysis to understand geographic patterns and
+                    relationships. Their services include map creation, data visualization, land use analysis,
+                    environmental monitoring, and resource management.
+                </p>
+                <p>
+                    These services are widely used in sectors
+                    like forestry, urban planning, disaster management, agriculture, and infrastructure development.
+                    By transforming complex geographic data into clear and meaningful information, GIS professionals
+                    help organizations, governments, and communities make informed decisions for sustainable
+                    development and effective resource management.
+
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- portfolio section -->
+    <section id="portfolio" class="py-10">
+        <div class="md:flex gap-5 container items-center border-2 border-(--secondary) rounded-4xl p-4">
+            <div class="md:w-[75%] space-y-2 text-justify ">
+                <h2 class="md:text-2xl font-semibold title text-center text-yellow-100 underline">
+                    PORTFOLIO
+                </h2>
+                <p>
+                    A Geographic Information System (GIS) portfolio is a collection of projects and maps that
+                    demonstrate a person's skills in spatial analysis, cartography, and geospatial data management.
+                    It highlights the ability to use GIS tools such as ArcGIS and QGIS to collect, analyze, and
+                    visualize geographic data.
+                </p>
+                <p>
+                    A strong GIS portfolio usually includes thematic maps, spatial
+                    analysis results, remote sensing outputs, and short explanations of each project's objectives,
+                    data sources, and methodology. By presenting well-designed maps and clear descriptions, a GIS
+                    portfolio helps showcase technical abilities, problem-solving skills, and practical experience
+                    in the field of Geographic Information Systems. It is an important tool for students and
+                    professionals when applying for internships, research opportunities, or jobs in geospatial and
+                    environmental fields.
+                </p>
+            </div>
+
+            <div class="md:w-[0.25%] bg-(--secondary) md:h-[250px] mt-4"></div>
+
+            <div class="md:w-[45%] text-center">
+                <img src="/image/geospatial.jpg" alt="portfolio image">
+                <p class="py-5">Geospatial Technology</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- card parts -->
+    <div class="grid md:grid-cols-3 container items-center ">
+        <div class="md:w-[300px] m-10 hover:text-(--secondary) shadow-[0_4px_15px_#ffffff] rounded-[20px] relative ">
+            <div>
+                <img class="rounded-[20px] " src="/image/GIS.jpg" alt="">
+                <span class="absolute top-4 bg-[green] px-4 py-1 text-white rounded-r-[20px]">starts in 3 days</span>
+            </div>
+
+            <div class="p-2">
+                <h3>Course Name: GIS Fundamentals</h3>
+                <p>Duration: 4 weeks</p>
+            </div>
+        </div>
+
+        <div class="md:w-[300px] m-10 hover:text-(--secondary) shadow-[0_4px_15px_#ffffff] rounded-[20px] relative">
+            <div>
+                <img class="rounded-[20px]" src="/image/GIS1.jpg" alt="">
+                <span class="absolute top-4 bg-(--secondary) px-4 py-1 text-white rounded-r-[20px]">starts in 9
+                    days</span>
+            </div>
+
+            <div class="p-2">
+                <h3>Course Name: GIS workshop</h3>
+                <p>Duration: 2 weeks</p>
+
+            </div>
+        </div>
+
+        <div class="md:w-[300px] m-10 hover:text-(--secondary) shadow-[0_4px_15px_#ffffff] rounded-[20px] relative">
+            <div>
+                <img class="rounded-[20px]" src="/image/gis3.jpg" alt="">
+                <span class="absolute top-4 bg-(--primary) px-4 py-1 text-white rounded-r-[20px]">starts in 20
+                    days</span>
+            </div>
+
+            <div class="p-2">
+                <h3>Course Name: Advance GIS analysis</h3>
+                <p>Duration: 1.5 month</p>
+            </div>
+        </div>
+    </div>
+    <!-- GET in touch -->
+    <section id="contact">
+        <div class="py-10">
+
+            <div class="ml-10 mb-12 text-left border-l-8 border-(--secondary) pl-6">
+                <h1 class="text-4xl md:text-5xl font-extrabold tracking-tighter text-(--text)">
+                    Get in Touch
+                </h1>
+                <p class="text-lg text-(--text) mt-2 ">
+                    We're looking forward to hearing from you! Whether you have questions about our GIS courses, want to
+                    discuss
+                </p>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 m-8">
+                <div class="lg:col-span-2">
+                    <div
+                        class="bg-blue-200 rounded-2xl shadow-sm hover:shadow-md transition border border-gray-200 overflow-hidden h-full">
+                        <div class="p-6 md:p-8">
+                            <h2 class="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+                                <i class="fas fa-map-marker-alt text-red-800"></i>
+                                Our Location
+                            </h2>
+
+                            <div class="md:w-full">
+                                <iframe class="w-full h-[300px] md:h-[400px] rounded-lg"
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d683.0307428432562!2d81.62373572319531!3d28.601106886046832!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39a28fe25f8620ef%3A0xa7899c6172b83bf6!2sMinistry%20of%20Industry%2CTourism%2CForest%20and%20Environment(MOITFE)%2C%20Karnali%20Province!5e1!3m2!1sen!2snp!4v1773210019992!5m2!1sen!2snp"
+                                    style="border:0;" allowfullscreen="" loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade">
+                                </iframe>
+                            </div>
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <h3 class="font-semibold text-green-900 mb-2 underline">Address</h3>
+                                    <p class="text-gray-600 leading-relaxed">
+                                        Mahesh Nepali<br>
+                                        Birendranagar-3, Surkhet<br>
+                                        Nepal
+                                    </p>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-green-900 mb-2 underline">Reach Us</h3>
+                                    <ul class="space-y-2 text-gray-600">
+                                        <li class="flex items-center gap-2">
+                                            <i class="fas fa-phone-alt text-(--primary) w-4"></i>
+                                            <a href="tel:+97025-575163" class="hover:text-(--primary) transition">+977
+                                                025-575163</a>
+                                        </li>
+                                        <li class="flex items-center gap-2">
+                                            <i class="fas fa-envelope text-(--primary) w-4"></i>
+                                            <a href="mailto:mnepali2022@gmail.com"
+                                                class="hover:text-(--primary) transition">mnepali2022@gmail.com</a>
+                                        </li>
+                                        <li class="flex items-center gap-2">
+                                            <i class="fab fa-whatsapp text-(--primary) w-4"></i>
+                                            <a href="https://wa.me/9779858063620" target="_blank"
+                                                class="hover:text-(--primary) transition">9858063620</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- contact forms -->
+                <div class="lg:col-span-1">
+                    <div class="bg-blue-200 p-4 rounded-2xl shadow-xl w-full max-w-lg">
+
+                        <h2 class="text-3xl font-bold text-blue-950 text-center ">
+                            Contact Me
+                        </h2>
+
+                        <form class="space-y-5">
+
+                            <!-- Name -->
+                            <div>
+                                <label class="block text-blue-200 ">Full Name</label>
+                                <input type="text" placeholder="Enter your name"
+                                    class="w-full px-2 py-2 rounded-lg bg-blue-900 text-white border border-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400">
+                            </div>
+
+                            <!-- Email -->
+                            <div>
+                                <label class="block text-blue-200 ">Email</label>
+                                <input type="email" placeholder="Enter your email"
+                                    class="w-full px-4 py-2 rounded-lg bg-blue-900 text-white border border-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400">
+                            </div>
+
+                            <!-- Subject -->
+                            <div>
+                                <label class="block text-blue-200 ">Subject</label>
+                                <input type="text" placeholder="Subject"
+                                    class="w-full px-4 py-2 rounded-lg bg-blue-900 text-white border border-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400">
+                            </div>
+
+                            <!-- Message -->
+                            <div>
+                                <label class="block text-blue-200 ">Message</label>
+                                <textarea rows="4" placeholder="Write your message..."
+                                    class="w-full px-4 py-2 rounded-lg bg-blue-900 text-white border border-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400"></textarea>
+                            </div>
+
+                            <!-- Button -->
+                            <button type="submit"
+                                class="w-full bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 rounded-lg transition duration-300">
+                                Send Message
+                            </button>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- terms and conditions -->
+    <section>
+        <footer class="bg-[#010057] text-gray-300 font-sans border-t border-gray-800/50">
+            <div class="border-b border-gray-800/50 bg-[#010048]/50 backdrop-blur-md">
+                <div
+                    class="max-w-7xl mx-auto px-6 py-6 flex flex-wrap items-center justify-center md:justify-between gap-8">
+                    <p class="text-xs font-bold tracking-widest text-gray-500 uppercase">
+                        Mahesh Nepali
+                    </p>
+                </div>
+            </div>
+
+            <div class="md:max-w-7xl mx-auto px-6 pt-8 pb-8">
+                <div class="grid md:grid-cols-12 gap-12">
+                    <div class="col-span-6 space-y-6">
+                        <div class="space-y-4 space-x-4">
+                            <img src="/image/globe.svg" alt="globe" class="h-30">
+                            <h2 class="text-xl font-black">
+                                Building a GIS Tech-Forward Nepal
+                            </h2>
+                            <p class="text-sm text-gray-400 leading-relaxed max-w-lg text-justify">
+                                Geographic Information System (GIS) plays a vital role in building a tech-forward Nepal
+                                by
+                                helping analyze and visualize geographic data for better decision-making. It supports
+                                sectors such as urban planning, disaster management, forestry, agriculture, and
+                                infrastructure development. By integrating spatial data with modern technology, GIS
+                                enables
+                                efficient resource management and sustainable development.
+                            </p>
+                        </div>
+                        <div
+                            class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-green-500/10 border border-green-500/20 text-blue-200 text-xs font-medium">
+                            <span class="relative flex h-2 w-2">
+                                <span
+                                    class="animate-ping absolute inline-flex h-full w-full rounded-full bg-(--secondary)/400 opacity-75"></span>
+                                <span class="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+                            </span>
+                            Admissions Open for 2026 Sessions
+                        </div>
+                    </div>
+
+                    <div class="col-span-2">
+                        <h4 class="text-white font-semibold mb-6 underline">Institute</h4>
+                        <ul class="space-y-4 text-sm">
+
+                            <li><a href="/image/hero.png" class="hover:text-(--primary)">Mentors</a></li>
+
+                        </ul>
+                    </div>
+
+                    <div class="col-span-4 space-y-6">
+                        <h4 class="text-white font-semibold underline">Stay Updated</h4>
+                        <a href="https://wa.me/9779858062620" target="_blank"
+                            class="border border-[#118C7E] rounded-4xl bg-linear-to-r bg-[#118C7E]/80 hover:bg-[#118C7E] font-bold py-3 text-center transition-colors block">
+                            <i class="fab fa-whatsapp text-lg"></i>
+                            Join Our Commununity
+                        </a>
+                        <div class="space-y-3">
+                            <p class="text-xs text-yellow-200 font-bold uppercase tracking-tighter">
+                                Connect with the community
+                            </p>
+                            <div class="flex items-center gap-8 text-[28px]">
+                                <a href="https://www.facebook.com/hanok.nepali" class="hover:text-green-500"
+                                    target="_blank">
+                                    <i class="fa-brands fa-facebook"></i></a>
+                                <a href="https://twitter.com/mnepali12" class="hover:text-blue-500" target="_blank">
+                                    <i class="fa-brands fa-twitter"></i></a>
+                                <a href="https://www.linkedin.com/in/mahesh-nepali-0a10763b6/"
+                                    class="hover:text-yellow-500" target="_blank"><i
+                                        class="fa-brands fa-linkedin"></i></a>
+                                <a href="https://github.com/mnepali12" class="hover:text-purple-500" target="_blank"><i
+                                        class="fa-brands fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </section>
+
+    <!-- foooter  -->
+    <footer class="text-center text-xs text-(--secondary) py-2">
+        <p>© 2026 Mahesh Nepali. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>
+</body>
+
+</html>
